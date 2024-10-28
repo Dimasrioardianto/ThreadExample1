@@ -1,6 +1,7 @@
 package id.ac.polbeng.ardianto.threadexample1
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,5 +23,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private
+    private fun startThread() {
+        for (i in 1..10) {
+            Log.d(TAG, "startThread: $i")
+            try {
+                Thread.sleep(1000)
+            } catch (ie: InterruptedException) {
+                ie.printStackTrace()
+            }
+        }
+    }
 }
