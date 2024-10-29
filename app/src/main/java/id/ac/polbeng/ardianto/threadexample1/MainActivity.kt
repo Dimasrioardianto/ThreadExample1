@@ -14,13 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.btnStartThread.setOnClickListener {
             startThread()
         }
     }
-
-    private fun startThread() {
+    private fun startThread(){
         for (i in 1..10) {
             Log.d(TAG, "startThread: $i")
             try {

@@ -7,7 +7,12 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchUI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+    <Button
         android:id="@+id/btnStartThread"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
